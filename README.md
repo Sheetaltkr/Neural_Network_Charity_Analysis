@@ -47,33 +47,33 @@ The count of neurons for first hidden layer is **80** and in second **30** as no
 **Trial1**: AlphabetSoupCharity_Optimization_1.ipynb
 
 In this model, the neurons in second hidden layer have been reduced to 28. The accuracy improves to ~71% and loss changes to 0.79
-number_input_features = 43
-hidden_nodes_layer1 = 80 activation = relu
-hidden_nodes_layer2 = 28 activation = relu
-output activation = sigmoid
-epoch = 50
+-  number_input_features = 43
+-  hidden_nodes_layer1 = 80 activation = relu
+-  hidden_nodes_layer2 = 28 activation = relu
+-  output activation = sigmoid
+-  epoch = 50
 
 **Trial2**: AlphabetSoupCharity_Optimization_2.ipynb
 
 In this model, the neurons in second hidden layer have been reduced to 28 and column USE_CASE has been dropped to check if this is a noisy feature. The accuracy improves to ~71% and loss changes to 1.31 which is not ideal. 
-Additional feature dropped = USE_CASE
-number_input_features = 43
-hidden_nodes_layer1 = 80 activation = relu
-hidden_nodes_layer2 = 28 activation = relu
-output activation = sigmoid
-epoch = 50
+-  Additional feature dropped = USE_CASE
+-  number_input_features = 43
+-  hidden_nodes_layer1 = 80 activation = relu
+-  hidden_nodes_layer2 = 28 activation = relu
+-  output activation = sigmoid
+-  epoch = 50
 
 
 **Trial3**: AlphabetSoupCharity_Optimization_3.ipynb
 
 In this model, third hidden layer has been added with neuron count as 10 and the neuron count in first 2 layers is increased to 160 and 40 respectively. The accuracy degrades to ~59% and loss changes to 0.65. 
 
-number_input_features = 43
-hidden_nodes_layer1 = 160 activation = relu
-hidden_nodes_layer2 = 40 activation = relu
-hidden_nodes_layer3 = 10 activation = relu
-output activation = sigmoid
-epoch = 50
+-  number_input_features = 43
+-  hidden_nodes_layer1 = 160 activation = relu
+-  hidden_nodes_layer2 = 40 activation = relu
+-  hidden_nodes_layer3 = 10 activation = relu
+-  output activation = sigmoid
+-  epoch = 50
 
 ## Summary: 
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
