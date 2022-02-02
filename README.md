@@ -38,8 +38,13 @@ In some cases, the organizations are fraud, hence it is extremely important to p
   
 ### Compiling, Training, and Evaluating the Model
 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
-2. Were you able to achieve the target model performance?
-3. What steps did you take to try and increase model performance?
+There is one input layer , two hidden layers and an output layer
+The count of neurons for first hidden layer is **80** and in second **30** as no. of input variables is 9 hence the hidden layer neurons need to be atleast 2-3 times of input variables, where as the following hidden layer neurons need to be atleast . The hidden layer activation function used is "ReLU" for both layers as the ReLU function is ideal for looking at positive nonlinear input data for classification. 
+3. Were you able to achieve the target model performance?
+   No, the maximum accuracy achieved was ~71%
+5. What steps did you take to try and increase model performance?
+
+
 
 ## Summary: 
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
