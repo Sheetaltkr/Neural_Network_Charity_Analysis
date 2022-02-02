@@ -15,9 +15,27 @@ In some cases, the organizations are fraud, hence it is extremely important to p
 
 ### Data Preprocessing
 1. What variable(s) are considered the target(s) for your model?
-2. What variable(s) are considered to be the features for your model?
-3. What variable(s) are neither targets nor features, and should be removed from the input data?
+   One variable listed below is considered the target for the model
+  - IS_SUCCESSFUL
+   
+3. What variable(s) are considered to be the features for your model?
+  The variables listed below are considered to be the features
 
+  - APPLICATION_TYPE          
+  - AFFILIATION                 
+  - CLASSIFICATION            
+  - USE_CASE                    
+  - ORGANIZATION                
+  - STATUS                       
+  - INCOME_AMT                   
+  - SPECIAL_CONSIDERATIONS       
+  - ASK_AMT                   
+
+5. What variable(s) are neither targets nor features, and should be removed from the input data?
+  - EIN
+  - NAME
+  
+  
 ### Compiling, Training, and Evaluating the Model
 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
 2. Were you able to achieve the target model performance?
