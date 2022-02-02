@@ -44,18 +44,27 @@ The count of neurons for first hidden layer is **80** and in second **30** as no
    No, the maximum accuracy achieved was ~71%
 3. What steps did you take to try and increase model performance?
 
-**Trial1**: AlphabetSoupCharity_Optimization_1.ipynb
+**Trial1**: AlphabetSoupCharity_Optimization.ipynb
 
-In this model, the neurons in second hidden layer have been reduced to 28. The accuracy improves to ~71% and loss changes to 0.79
+In this model, the neurons in second hidden layer have been reduced to 28. The accuracy improves to ~64% and loss changes to 0.64
 -  number_input_features = 43
 -  hidden_nodes_layer1 = 80 activation = relu
 -  hidden_nodes_layer2 = 28 activation = relu
 -  output activation = sigmoid
 -  epoch = 50
+-  
+**Trial2**: AlphabetSoupCharity_Optimization_1.ipynb
 
-**Trial2**: AlphabetSoupCharity_Optimization_2.ipynb
+In this model, the neurons in first and second hidden layer have been increased to 120 and 60. The accuracy improves to ~69% and loss changes to 0.72
+-  number_input_features = 43
+-  hidden_nodes_layer1 = 120 activation = relu
+-  hidden_nodes_layer2 = 60 activation = relu
+-  output activation = sigmoid
+-  epoch = 50
 
-In this model, the neurons in second hidden layer have been reduced to 28 and column USE_CASE has been dropped to check if this is a noisy feature. The accuracy improves to ~71% and loss changes to 1.31 which is not ideal. 
+**Trial3**: AlphabetSoupCharity_Optimization_2.ipynb
+
+In this model, the neurons in first and second hidden layer have been reduced to 80 and 28 and column USE_CASE has been dropped to check if this is a noisy feature. The accuracy improves to ~71% and loss changes to 1.31 which is not ideal. 
 -  Additional feature dropped = USE_CASE
 -  number_input_features = 43
 -  hidden_nodes_layer1 = 80 activation = relu
@@ -64,7 +73,7 @@ In this model, the neurons in second hidden layer have been reduced to 28 and co
 -  epoch = 50
 
 
-**Trial3**: AlphabetSoupCharity_Optimization_3.ipynb
+**Trial4**: AlphabetSoupCharity_Optimization_3.ipynb
 
 In this model, third hidden layer has been added with neuron count as 10 and the neuron count in first 2 layers is increased to 160 and 40 respectively. The accuracy degrades to ~59% and loss changes to 0.65. 
 
@@ -78,7 +87,7 @@ In this model, third hidden layer has been added with neuron count as 10 and the
 ## Summary:
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
 
--  The maximum accuracy we see is 71% with loss of 0.79, by reducing the number of neurons by 2 from the original model with no optimization. Various attempts have been made by tweaking the no of neurons, hidden layers, changing activation function and dropping a couple of columns. However there was no improvement in model accuracy.
+-  The maximum accuracy with lower loss we see is **69%** with loss of** 0.72**, by increasing the number of neurons from the original model. Various attempts have been made by tweaking the no of neurons, hidden layers, changing activation function and dropping a couple of columns. However there was no improvement in model accuracy.
 -  One can re-try using more data to train the model.
 
 ### Recommendation:
