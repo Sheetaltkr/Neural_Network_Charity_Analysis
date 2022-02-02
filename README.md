@@ -15,10 +15,11 @@ In some cases, the organizations are fraud, hence it is extremely important to p
 
 ### Data Preprocessing
 1. What variable(s) are considered the target(s) for your model?
-   One variable listed below is considered the target for the model
+    One variable listed below is considered the target for the model
   - IS_SUCCESSFUL
    
 2. What variable(s) are considered to be the features for your model?
+  
   The variables listed below are considered to be the features
 
   - APPLICATION_TYPE          
@@ -38,10 +39,14 @@ In some cases, the organizations are fraud, hence it is extremely important to p
   
 ### Compiling, Training, and Evaluating the Model
 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+
 There is one input layer , two hidden layers and an output layer
 The count of neurons for first hidden layer is **80** and in second **30** as no. of input variables is 9 hence the hidden layer neurons need to be atleast 2-3 times of input variables. The hidden layer activation function used is "ReLU" for both layers as the ReLU function is ideal for looking at positive nonlinear input data for classification. 
+
 2. Were you able to achieve the target model performance?
-   No, the maximum accuracy achieved was ~71%
+
+  No, the maximum accuracy achieved was ~71%
+
 3. What steps did you take to try and increase model performance?
 
 **Trial1**: AlphabetSoupCharity_Optimization.ipynb
@@ -52,7 +57,10 @@ In this model, the neurons in second hidden layer have been reduced to 28. The a
 -  hidden_nodes_layer2 = 28 activation = relu
 -  output activation = sigmoid
 -  epoch = 50
--  
+
+![](https://github.com/Sheetaltkr/Neural_Network_Charity_Analysis/blob/main/Resources/images/1.png)
+
+
 **Trial2**: AlphabetSoupCharity_Optimization_1.ipynb
 
 In this model, the neurons in first and second hidden layer have been increased to 120 and 60. The accuracy improves to ~69% and loss changes to 0.72
@@ -61,6 +69,8 @@ In this model, the neurons in first and second hidden layer have been increased 
 -  hidden_nodes_layer2 = 60 activation = relu
 -  output activation = sigmoid
 -  epoch = 50
+
+![](https://github.com/Sheetaltkr/Neural_Network_Charity_Analysis/blob/main/Resources/images/1_1.png)
 
 **Trial3**: AlphabetSoupCharity_Optimization_2.ipynb
 
@@ -72,6 +82,7 @@ In this model, the neurons in first and second hidden layer have been reduced to
 -  output activation = sigmoid
 -  epoch = 50
 
+![](https://github.com/Sheetaltkr/Neural_Network_Charity_Analysis/blob/main/Resources/images/2.png)
 
 **Trial4**: AlphabetSoupCharity_Optimization_3.ipynb
 
@@ -84,6 +95,8 @@ In this model, third hidden layer has been added with neuron count as 10 and the
 -  output activation = sigmoid
 -  epoch = 50
 
+![](https://github.com/Sheetaltkr/Neural_Network_Charity_Analysis/blob/main/Resources/images/3.png)
+
 ## Summary:
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
 
@@ -91,6 +104,8 @@ Summarize the overall results of the deep learning model. Include a recommendati
 -  One can re-try using more data to train the model.
 
 ### Recommendation:
+- SoftMax function could help us find the probability of the each class
+- Tanh function could be tried with 2 hidden layers 
 - We can try with just 1 input layer and 1 output layer with 0 hidden layers using just Sigmoid activitation function. 
 - Sample values could be generated to train the model better.
 
