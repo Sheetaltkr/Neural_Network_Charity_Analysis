@@ -87,7 +87,7 @@ In this model, third hidden layer has been added with neuron count as 10 and the
 ## Summary:
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
 
--  The maximum accuracy with lower loss we see is **69%** with loss of** 0.72**, by increasing the number of neurons from the original model. Various attempts have been made by tweaking the no of neurons, hidden layers, changing activation function and dropping a couple of columns. However there was no improvement in model accuracy.
+-  The maximum accuracy with lower loss we see is **69%** with loss of **0.72**, by increasing the number of neurons from the original model. Various attempts have been made by tweaking the no of neurons, hidden layers, changing activation function and dropping a couple of columns. However there was no improvement in model accuracy.
 -  One can re-try using more data to train the model.
 
 ### Recommendation:
