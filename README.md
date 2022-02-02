@@ -18,7 +18,7 @@ In some cases, the organizations are fraud, hence it is extremely important to p
    One variable listed below is considered the target for the model
   - IS_SUCCESSFUL
    
-3. What variable(s) are considered to be the features for your model?
+2. What variable(s) are considered to be the features for your model?
   The variables listed below are considered to be the features
 
   - APPLICATION_TYPE          
@@ -31,7 +31,7 @@ In some cases, the organizations are fraud, hence it is extremely important to p
   - SPECIAL_CONSIDERATIONS       
   - ASK_AMT                   
 
-5. What variable(s) are neither targets nor features, and should be removed from the input data?
+3. What variable(s) are neither targets nor features, and should be removed from the input data?
   - EIN
   - NAME
   
@@ -39,12 +39,41 @@ In some cases, the organizations are fraud, hence it is extremely important to p
 ### Compiling, Training, and Evaluating the Model
 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
 There is one input layer , two hidden layers and an output layer
-The count of neurons for first hidden layer is **80** and in second **30** as no. of input variables is 9 hence the hidden layer neurons need to be atleast 2-3 times of input variables, where as the following hidden layer neurons need to be atleast . The hidden layer activation function used is "ReLU" for both layers as the ReLU function is ideal for looking at positive nonlinear input data for classification. 
-3. Were you able to achieve the target model performance?
+The count of neurons for first hidden layer is **80** and in second **30** as no. of input variables is 9 hence the hidden layer neurons need to be atleast 2-3 times of input variables. The hidden layer activation function used is "ReLU" for both layers as the ReLU function is ideal for looking at positive nonlinear input data for classification. 
+2. Were you able to achieve the target model performance?
    No, the maximum accuracy achieved was ~71%
-5. What steps did you take to try and increase model performance?
+3. What steps did you take to try and increase model performance?
+
+**Trial1**: AlphabetSoupCharity_Optimization_1.ipynb
+
+In this model, the neurons in second hidden layer have been reduced to 28. The accuracy improves to ~71% and loss changes to 0.79
+number_input_features = 43
+hidden_nodes_layer1 = 80 activation = relu
+hidden_nodes_layer2 = 28 activation = relu
+output activation = sigmoid
+epoch = 50
+
+**Trial2**: AlphabetSoupCharity_Optimization_2.ipynb
+
+In this model, the neurons in second hidden layer have been reduced to 28 and column USE_CASE has been dropped to check if this is a noisy feature. The accuracy improves to ~71% and loss changes to 1.31 which is not ideal. 
+Additional feature dropped = USE_CASE
+number_input_features = 43
+hidden_nodes_layer1 = 80 activation = relu
+hidden_nodes_layer2 = 28 activation = relu
+output activation = sigmoid
+epoch = 50
 
 
+**Trial3**: AlphabetSoupCharity_Optimization_3.ipynb
+
+In this model, third hidden layer has been added with neuron count as 10 and the neuron count in first 2 layers is increased to 160 and 40 respectively. The accuracy degrades to ~59% and loss changes to 0.65. 
+
+number_input_features = 43
+hidden_nodes_layer1 = 160 activation = relu
+hidden_nodes_layer2 = 40 activation = relu
+hidden_nodes_layer3 = 10 activation = relu
+output activation = sigmoid
+epoch = 50
 
 ## Summary: 
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
